@@ -1,0 +1,43 @@
+@import "_buttons.scss";
+
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+    
+    font-family: Montserrat;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 6% 10px 3%;
+    
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+         
+        &__items {
+            
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px;
+            letter-spacing: -0.015em;
+            color: #2594AD;
+            & a:visited {
+                color: #2594AD;    
+            }
+
+        }  
+    }
+
+}
+
+.top-banner {
+    background-image: url("img/bannerLayer.png");
+}
+
