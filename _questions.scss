@@ -58,12 +58,34 @@
     }
 
     &__item {
+        padding: 0 0 0 15px;
+        // height: 64px;
         background: #FFFFFF;
         border: 1px solid #D0D0D0;
         box-sizing: border-box;
         border-radius: 6px;
 
+        &:after {
+            content: url('img/plus.svg');
+            position: absolute;
+        }
+
+        &_opened {
+            &:after {
+                content: url('img/minus.svg');
+                position: absolute;
+            }
+
+            & p {
+                display: none;
+            }
+
+            
+        }
+
         & h4 {
+            margin: 0;
+
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -74,6 +96,8 @@
         }  
 
         & p {
+            margin: 0;
+
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
