@@ -7,6 +7,7 @@ $color2: #2594AD;
 @import "_order.scss";
 @import "_about.scss";
 @import "_questions.scss";
+@import "_footer.scss";
 
 .container{
     margin: 0 auto;
@@ -37,9 +38,9 @@ $color2: #2594AD;
             font-weight: 600;
             line-height: 30px;
             letter-spacing: -0.015em;
-            color: #2594AD;
+            color: $color2;
             & a:visited {
-                color: #2594AD;    
+                color: $color2;    
             }
             padding: 0 7% 0 0;
 

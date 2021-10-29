@@ -64,16 +64,19 @@
         border: 1px solid #D0D0D0;
         box-sizing: border-box;
         border-radius: 6px;
+        position: relative;
 
         &:after {
             content: url('img/plus.svg');
             position: absolute;
+            right: 10px;
         }
 
         &_opened {
             &:after {
                 content: url('img/minus.svg');
                 position: absolute;
+                right: 10px;
             }
 
             & p {

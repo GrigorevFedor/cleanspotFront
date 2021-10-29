@@ -1,0 +1,55 @@
+$color1: #FFF;
+$color2: #2594AD;
+
+.footer {
+    &__logo {
+        text-align: center;
+    }
+
+    & hr {
+        border: none;
+        color: $color2; 
+        background-color: $color2; 
+        height: 1px; 
+    }
+
+    &__social {
+        display: flex;
+        margin: 0 auto;
+
+        &__link {
+          
+            & div {
+                width: 44px;
+                height: 44px;
+                background: $color2;
+                border-radius: 50%;
+                color: $color1;
+                text-align: center;
+                font-size: 13px;
+                font-weight: 50;
+                padding-top: 3px;
+                box-sizing: border-box;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    &__bottom-menu {
+        display: flex;
+        &__item {
+            list-style-type: none;
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px;
+            letter-spacing: -0.015em;
+            color: $color2;
+            & a:visited {
+                color: $color2;    
+            }
+            padding: 0 7% 0 0;
+        }
+    }
+}
