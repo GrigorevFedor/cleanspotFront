@@ -3,20 +3,37 @@ $color2: #2594AD;
 $color7: #E47607;
 
 .order {
-    height: 970px;
     padding: 90px 47px 0 47px;
     
+    &__btm-button {
+        margin-bottom: 44px;
+    }
 
     &__type {
         display: flex;
         margin-bottom: 40px;
         place-content: center;
 
+        &:hover {
+            cursor: pointer;
+        }
+
+
+        & :first-child {
+            border-radius: 6px 0px 0px 6px;
+        }
+
+        & :last-child {
+            border-radius: 0px 6px 6px 0px;
+        }
+
 
         &__item {
             width: 340px;
             height: 70px;
-            text-align: center center;
+            text-align: center;
+            padding-top: 27px;
+            box-sizing: border-box;
 
             border: 1px solid #D4D4D4;
             border-collapse: collapse;
@@ -69,6 +86,8 @@ $color7: #E47607;
 
         &__item {
             width: 45%;
+
+            
         }
     }
 }
