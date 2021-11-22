@@ -16,6 +16,12 @@ $color6: #000000;
 @import "_questions.scss";
 @import "_footer.scss";
 
+@import "_registration.scss";
+@import "_cabinet.scss";
+@import "_pagination.scss";
+@import "_orders.scss";
+
+
 .container{
     margin: 0 auto;
     max-width: 1440px;
@@ -24,6 +30,13 @@ $color6: #000000;
     
 }
 
+.unvisible {
+    display: none;
+}
+
+.f-16 {
+    font-size: 16px;
+}
 
 
 

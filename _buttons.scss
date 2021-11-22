@@ -19,11 +19,11 @@ $color5: #E4E4E4;
     line-height: 30px;
     padding: 15px 60px;
 
-    &-visible {
+    &.visible {
         display: block;
     }
 
-    &-unvisible {
+    &.unvisible {
         display: none;
     }
 

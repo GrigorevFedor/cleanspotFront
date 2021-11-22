@@ -1,0 +1,126 @@
+.orders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    
+
+    &__item {
+        width: 49%;
+        max-height: 250px;
+        min-width: 400px;
+        padding: 20px 30px;
+        text-align: left;
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        border: 1px solid #E4E4E4;
+        box-sizing: border-box;
+        border-radius: 6px;
+        position: relative;
+
+        &__buttons {
+            display: flex;
+
+        }
+
+        &__more {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            opacity:0;
+            visibility:hidden;
+    
+            &:checked + .orders__item label::after {
+                content: url(img/minus.svg);
+            }
+            &:checked + .orders__item {
+                width: 100%;
+                max-height:none;
+                transition-duration: 500ms;
+            }
+
+            &:checked + .orders__item ~ .orders__item__buttons {
+                display: flex;
+            }
+    
+            &:not(:checked)  + .orders__item {
+                width: 49%;
+                transition-duration: 500ms;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px gray;
+            transition-duration: 500ms;
+        }
+
+        &__number {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: -0.015em;
+            color: #000000;
+        }
+
+        &__day {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 18px;
+            letter-spacing: -0.015em;
+            color: #E47607;
+        }
+
+        &__time {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 18px;
+            letter-spacing: -0.015em;
+            color: #E47607;
+        }
+
+        &__adress{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: -0.015em;
+            color: #8C8C8C;
+        }
+
+        &__status {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 18px;
+            letter-spacing: -0.015em;
+            color: #E47607;
+        }
+
+        & label {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+
+            &::after {
+                content: url(img/plus.svg);
+                display: inline-block;
+                position: absolute;
+                top: 2px;
+                right: 20px;
+            }
+        }
+    }
+}
