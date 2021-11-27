@@ -3,11 +3,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    
-
     &__item {
         width: 49%;
-        max-height: 250px;
+        
+        // max-height: 250px;
         min-width: 400px;
         padding: 20px 30px;
         text-align: left;
@@ -20,8 +19,21 @@
         position: relative;
 
         &__buttons {
+            visibility: hidden;
+            width: 0%;
+
+            & button {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__content {
             display: flex;
 
+            &_wrp {
+                width: 100%;
+            }
         }
 
         &__more {
@@ -30,8 +42,8 @@
             top: 0;
             height: 100%;
             width: 100%;
-            opacity:0;
-            visibility:hidden;
+            opacity: 0;
+            visibility: hidden;
     
             &:checked + .orders__item label::after {
                 content: url(img/minus.svg);
@@ -42,8 +54,14 @@
                 transition-duration: 500ms;
             }
 
-            &:checked + .orders__item ~ .orders__item__buttons {
-                display: flex;
+            &:checked + .orders__item .orders__item__buttons {
+                visibility: visible;
+                transition-duration: 500ms;
+                width: 30%;
+            }
+
+            &:checked + .orders__item .orders__item__content_wrp {
+                width: 70%;
             }
     
             &:not(:checked)  + .orders__item {
